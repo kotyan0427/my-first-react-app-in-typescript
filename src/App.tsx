@@ -1,18 +1,24 @@
 import React from "react";
-import "./App.css";
+import { Counter } from "./Counter";
 
-interface Props {
-  message: string;
+type Props = {
+  message?: string;
   name: string;
-}
+};
 
-function App({ message, name }: Props) {
+const App: React.VFC<Props> = ({ message, name }) => {
   return (
-    <div className="App">
-      {message}
-      {name}
+    <div>
+      {/* {message} */}
+      {/* {name} */}
+      <Counter />
     </div>
   );
-}
+};
+
+App.defaultProps = {
+  message: "Hello defaultProps",
+  name: "Kotyan",
+};
 
 export default App;
