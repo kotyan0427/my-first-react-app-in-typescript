@@ -1,5 +1,5 @@
 import React from "react";
-import { Counter } from "./Counter";
+import { CounterWithReducer } from "./CounterWithReducer";
 
 type Props = {
   message?: string;
@@ -9,9 +9,8 @@ type Props = {
 const App: React.VFC<Props> = ({ message, name }) => {
   return (
     <div>
-      {/* {message} */}
-      {/* {name} */}
-      <Counter />
+      {/* <Counter /> */}
+      <CounterWithReducer />
     </div>
   );
 };
